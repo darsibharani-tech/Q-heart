@@ -1,0 +1,10 @@
+{
+  "name": "Processor B",
+  "description": "Synthetic participant-defined nine-node heavy-hex-inspired architecture; not a commercial-device claim.",
+  "physical_qubits": 9,
+  "nodes": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  "coupling_edges": [[0, 1], [1, 2], [1, 6], [2, 3], [2, 6], [2, 5], [3, 4], [4, 5], [5, 6], [6, 7], [6, 8], [8, 0]],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "transpilation": {"optimization_level": 1, "seed_transpiler": 42},
+  "noise": {"single_qubit_depolarizing": 0.001, "cx_depolarizing": 0.005, "readout_error": 0.01, "shots": 4096}
+}
