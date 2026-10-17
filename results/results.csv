@@ -1,0 +1,9 @@
+model,architecture,evaluation_mode,seed,shots,accuracy,loss,iterations,depth,cx_count,swap_count,routing_metric,runtime_s,notes
+LogisticRegression,classical,held_out_test,42,,0.9,,,,,,,0.017728799997712485,Same raw features; StandardScaler fit on training data only.
+Four-qubit VQC,logical,ideal_statevector,42,,0.825,0.5813526457846411,29,9,6,0,logical baseline,12.365037200004735,Angle encoding; Ry/Rz trainable layers; Z expectation p(class=1)=(1-Z)/2.
+Four-qubit VQC,Processor A,compiled_ideal_metadata,42,,,0.5813526457846411,29,18,6,0,0,,Same logical circuit; physical graph used only as coupling map.
+Four-qubit VQC,Processor B,compiled_ideal_metadata,42,,,0.5813526457846411,29,18,6,0,0,,Same logical circuit; physical graph used only as coupling map.
+Four-qubit VQC,Processor A,ideal_shot_based,42,4096,0.825,0.5813526457846411,29,18,6,0,see architecture_metrics.csv,,"AerSimulator, no noise."
+Four-qubit VQC,Processor A,noisy_shot_based,42,4096,0.825,0.5813526457846411,29,18,6,0,see architecture_metrics.csv,,"Aer depolarizing errors: rz/sx/x=0.001, cx=0.005; symmetric 0.01 readout error."
+Four-qubit VQC,Processor B,ideal_shot_based,42,4096,0.825,0.5813526457846411,29,18,6,0,see architecture_metrics.csv,,"AerSimulator, no noise."
+Four-qubit VQC,Processor B,noisy_shot_based,42,4096,0.825,0.5813526457846411,29,18,6,0,see architecture_metrics.csv,,"Aer depolarizing errors: rz/sx/x=0.001, cx=0.005; symmetric 0.01 readout error."
