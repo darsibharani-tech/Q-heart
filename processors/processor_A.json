@@ -1,0 +1,10 @@
+{
+  "name": "Processor A",
+  "description": "Synthetic participant-defined five-node branching architecture; not a commercial-device claim.",
+  "physical_qubits": 5,
+  "nodes": [0, 1, 2, 3, 4],
+  "coupling_edges": [[0, 1], [1, 2], [1, 3], [3, 4]],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "transpilation": {"optimization_level": 1, "seed_transpiler": 42},
+  "noise": {"single_qubit_depolarizing": 0.001, "cx_depolarizing": 0.005, "readout_error": 0.01, "shots": 4096}
+}2
